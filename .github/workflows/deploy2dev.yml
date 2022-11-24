@@ -9,5 +9,5 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@dev
       - run: rsync -az ${{secrets.DEV_PATH_SOURCE}} ${{secrets.DEV_PATH_TO}}
