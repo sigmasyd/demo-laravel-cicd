@@ -16,7 +16,7 @@ use App\Http\Controllers\Api\ProductController;
 |
 */
 
-Route::get('/product', [ProductController::class,'index']);
+#Route::get('/product', [ProductController::class,'index']);
 
 Route::controller(UserController::class)->group(function (){
     Route::get('/user','index');
