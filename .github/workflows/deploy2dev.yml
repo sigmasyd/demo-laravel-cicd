@@ -10,4 +10,4 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@master
-      #- run: rsync -az ${{secrets.PATH_SOURCE}} ${{secrets.PATH_TO}}
+      - run: rsync -az ${{secrets.DEV_PATH_SOURCE}} ${{secrets.DEV_PATH_TO}}
