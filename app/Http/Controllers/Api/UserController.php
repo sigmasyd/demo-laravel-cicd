@@ -12,6 +12,7 @@ use Illuminate\Http\Response;
 class UserController extends Controller{
     public function index(){
 
+        // Comentario sin importancia
         $users = Users::all();
 
         return response()->json([
