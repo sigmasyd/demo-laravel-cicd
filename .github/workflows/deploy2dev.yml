@@ -1,0 +1,13 @@
+name: Deployment in DEV
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@master
+      - run: rsync -az ${{secrets.DEV_PATH_SOURCE}} ${{secrets.DEV_PATH_TO}}

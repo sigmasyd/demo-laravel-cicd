@@ -1,0 +1,13 @@
+name: Deployment in MASTER
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@master
+      - run: rsync -az ${{secrets.PRD_PATH_SOURCE}} ${{secrets.PRD_PATH_TO}}
